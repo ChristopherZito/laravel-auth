@@ -21,7 +21,7 @@
         <input type="text" name="name" ><br>
 
         <label for="email">Email:</label>
-        <input type="text" name="email" ><br>
+        <input type="email" name="email" ><br>
 
         <label for="password">Password:</label>
         <input type="password" name="password" ><br>
@@ -46,7 +46,7 @@
         @csrf
 
         <label for="email">Email:</label>
-        <input type="text" name="email" ><br>
+        <input type="email" name="email" ><br>
 
         <label for="password">Password:</label>
         <input type="password" name="password" ><br>
