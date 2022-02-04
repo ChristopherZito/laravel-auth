@@ -1940,11 +1940,15 @@ __webpack_require__.r(__webpack_exports__);
     deleteEmp: function deleteEmp(id) {
       var _this = this;
 
+      console.log("id=", id);
       axios.get("/emp/delete/".concat(id)).then(function (res) {
         var data = res.data;
+        console.log("data", data);
 
         if (data) {
           var del = _this.getidByElement(_this.employees, id);
+
+          console.log("del", del);
 
           _this.employees.splice(del, 1);
         }
@@ -1957,6 +1961,7 @@ __webpack_require__.r(__webpack_exports__);
         var elem = array[i];
 
         if (elem.id == id) {
+          console.log("i=", i);
           return i;
         }
 
@@ -1970,7 +1975,7 @@ __webpack_require__.r(__webpack_exports__);
     axios.get('/emps/list').then(function (res) {
       var data = res.data;
       _this2.employees = data;
-      console.log(data);
+      /* console.log(data); */
     })["catch"](function (err) {
       console.error(err);
     });
@@ -37629,7 +37634,6 @@ var render = function () {
                     "a",
                     {
                       staticClass: "btn btn-danger",
-                      attrs: { href: "#" },
                       on: {
                         click: function ($event) {
                           return _vm.deleteEmp(employee.id)
